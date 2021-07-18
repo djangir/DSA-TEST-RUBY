@@ -2,8 +2,10 @@
 
 # ans  
 
-def sub(num1 , num2)
-    puts num1-num2
+class Subb
+    def initialize(num1 , num2)
+        puts num1-num2
+    end
 end
 puts "inter first number"
 a = gets.chomp.to_i
@@ -11,7 +13,7 @@ puts "inter 2nd number"
 b = gets.chomp.to_i
 
 puts "output #{a}-#{b} is :-"
-sub(a, b)
+Subb.new(a, b)
 
 
 
@@ -101,19 +103,20 @@ mat.strictly_below([8, 2, 10, 16] , 9)
 
 # how_mega_is_it(10000) ➞ "MEGA MEGA MEGA milestone"
 
+class Megaaa
 
-def mega(a)
+    def initialize(a)
     num = a.to_i
-    if num < 100
-        puts "#{num} is not a MEGA milestone"
-    else
-        str = num.to_s
-        megaa = str.length-2
-        puts " MEGA "*megaa + " milestone "
+        if num < 100
+            puts "#{num} is not a MEGA milestone"
+        else
+            str = num.to_s
+            megaa = str.length-2
+            puts " MEGA "*megaa + " milestone "
+        end
     end
 end
-
-mega(45458)
+Megaaa.new(45458)
 
 
 
@@ -131,51 +134,50 @@ mega(45458)
 
 # generate_hashtag("Edabit Is Great") ➞ "#EdabitIsGreat", "Should remove spaces."
 
-
-
-def hs str  
-    if str.length > 1 &&  str.length < 140
-    str1 = str.split
-    arrr = []
-    str1.each{|i| arrr << i.capitalize}
-    puts "outPut is ##{arrr.join("")} "
-    else
-        puts  false, "Expected an empty string to return false"
+class Hashh
+    def initialize(str)
+        if str.length > 1 &&  str.length < 140
+            str1 = str.split
+            arrr = []
+            str1.each{|i| arrr << i.capitalize}
+            puts "outPut is ##{arrr.join("")} "
+        else
+            puts  false, "Expected an empty string to return false"
+        end
     end
 end
-
 puts "inter strign for convert into #"
 string = gets 
-
-hs string
-
-
-
-
+        
+Hashh.new string
+        
+        
+        
+        
 # ans 5 
 
 
-
-def funcc str , num
-    str1 = str.delete(" -").upcase
-    puts str1.length
-    if str1.length <= 8
-        if num.to_i == 4 || num.to_i == 1
-        pos = str1.length/2
-           puts str1.insert(pos, "-")
-        elsif num.to_i == 3 || num.to_i == 2
-            stringg = str1.insert(2 , "-")  
-            puts stringg.insert(-3, "-")
-        else 
-            puts "inter 1 , 2 , 3 or 4"
+class Funcc
+    def initialize(str , num)
+        str1 = str.delete(" -").upcase
+        if str1.length <= 8
+            if num.to_i == 4 || num.to_i == 1
+            pos = str1.length/2
+                puts str1.insert(pos, "-")
+            elsif num.to_i == 3 || num.to_i == 2
+                stringg = str1.insert(2 , "-")  
+                puts stringg.insert(-3, "-")
+            else 
+                puts "inter 1 , 2 , 3 or 4"
+            end
+        else
+            puts  "Inter a valid String"
         end
-    else
-        puts  "Inter a valid String"
     end
 end
-
-
-puts "inter strign for convert into #"
+        
+puts "inter strign "
 string = gets.chomp
-
-funcc string , 3
+        
+Funcc.new string , 3
+        
