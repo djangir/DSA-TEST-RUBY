@@ -2,14 +2,14 @@
 
 class Subb
     def sub(a , b)
-        $a = a
-        $b = b
-        puts "with (-) oprator output is #{$a-$b}"
-        $arr = []
-        for i in $b...$a
-             $arr << 1     
+        @a = a
+        @b = b
+ 
+        @arr = []
+        for i in @b...@a
+             @arr << 1     
         end  
-        puts "without oprator result is : #{$arr.join("").length}"
+        puts "without oprator result is : #{@arr.join("").length}"
     end
 end  
 
