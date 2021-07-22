@@ -14,7 +14,7 @@
 
 
 class Funcc
-    def initialize(str , num)
+    def pair(str , num)
         str1 = str.delete(" -").upcase
         str2 = str1.reverse
         @n = num
@@ -29,11 +29,11 @@ class Funcc
                 @m = @n+@m+1
             end
          end
-        puts @arr.reverse.join()
+        return @arr.reverse.join()
     end
 end 
 puts "inter strign"
 string = gets.chomp
-Funcc.new string , 3
+puts Funcc.new.pair string , 3
 
         

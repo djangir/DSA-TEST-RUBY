@@ -18,7 +18,7 @@ class Array
         arr = self
         arr2 = []
         arr.each{|ij| arr2 << ij.to_i*ij.to_i}  
-        puts "Input Is #{arr} and square Is #{arr2}"
+        return "Input Is #{arr} and square Is #{arr2}"
     end
 
     
@@ -26,7 +26,7 @@ class Array
         arr = self
         arr2 = []
         arr.each{|ij| arr2 << ij.to_i*ij.to_i*ij.to_i}  
-        puts "Input Is #{arr} and cube Is #{arr2}"
+        return "Input Is #{arr} and cube Is #{arr2}"
     end
     
     def divisible_by(by)
@@ -38,7 +38,7 @@ class Array
                 arr2 << (ij.to_i)  
             end     
         }
-        puts "Input Is #{arr} and divisible_by #{by} Is #{arr2}"
+        return "Input Is #{arr} and divisible_by #{by} Is #{arr2}"
     end
 
     def strictly_above(by)
@@ -46,7 +46,7 @@ class Array
         by = by.to_i
         arr2 = arr.select{|i| i > by}
     
-        puts "Input Is #{arr} and strictly_above #{by} Is #{arr2}"
+        return "Input Is #{arr} and strictly_above #{by} Is #{arr2}"
     end
 
     def strictly_below(by)
@@ -54,12 +54,12 @@ class Array
         by = by.to_i
         arr2 = arr.select{|i| i < by}
     
-        puts "Input Is #{arr} and strictly_below #{by} Is #{arr2}"
+        return "Input Is #{arr} and strictly_below #{by} Is #{arr2}"
     end
 end
 
-[1, 2, 3].square  
-[1, 2, 3].cube  
+puts [1, 2, 3].square  
+puts [1, 2, 3].cube + " sss"  
 [1, 2, 3, 4, 5, 6].divisible_by(2) 
 [1, 2, 3, 4].strictly_above(1) 
 [1, 2, 3, 4].strictly_below(2)  

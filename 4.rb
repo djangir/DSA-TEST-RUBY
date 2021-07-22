@@ -13,21 +13,20 @@
 # generate_hashtag("Edabit Is Great") ➞ "#EdabitIsGreat", "Should remove spaces."
 
 class Hashh
-    def initialize(str)
+    def hsh(str)
         if str.length > 1 &&  str.length < 140
             str1 = str.split
             arrr = []
             str1.each{|i| arrr << i.capitalize}
-            puts "outPut is ##{arrr.join("")} "
+            return "outPut is ##{arrr.join("")} "
         else
-            puts  false, "Expected an empty string to return false"
+            return  false, "Expected an empty string to return false"
         end
     end
 end
-puts "inter strign for convert into #"
- 
-Hashh.new ("    Hello     World   " )
-Hashh.new ("")
-Hashh.new ("Edabit Is Great")
+  
+puts Hashh.new.hsh("    Hello     World   " )
+puts Hashh.new.hsh("")
+puts Hashh.new.hsh("Edabit Is Great")  
         
  
