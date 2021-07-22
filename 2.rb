@@ -40,6 +40,7 @@ class Array
     by = by.to_i
     self.select { |i| i > by }
   end
+  
   def strictly_below by  
     by = by.to_i
     self.select { |i| i < by }
