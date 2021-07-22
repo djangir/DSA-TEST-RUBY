@@ -14,6 +14,7 @@
 
 
 class Funcc
+  
   def pair str , num 
     str1 = str.delete(" -").upcase
     str2 = str1.reverse
@@ -26,7 +27,7 @@ class Funcc
         a +=1
         if (a == m && a < arr.length) 
           arr.insert(m , "-")
-          m = n+m+1
+          m = n + m + 1
         end
     end
     arr.reverse.join()
