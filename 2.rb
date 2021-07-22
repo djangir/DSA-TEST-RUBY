@@ -18,32 +18,32 @@
 
 
 class Array
-    def square 
-      self.map{|ij| ij.to_i*ij.to_i}  
-    end
-    def cube 
-      self.map{|ij|ij.to_i*ij.to_i*ij.to_i}  
-    end 
-    def divisible_by(by) 
-       byy = by.to_i
-       self.map{|ij| 
-       if(ij.to_i % byy == 0 )
-         ij.to_i  
-       end 
-               }
-    end
-    def strictly_above(by) 
-       by = by.to_i
-       self.select{|i| i > by}
-    end
-    def strictly_below(by) 
-       by = by.to_i
-       self.select{|i| i < by}
-    end
+  def square 
+    self.map{|ij| ij.to_i*ij.to_i}  
+  end
+  def cube 
+    self.map{|ij|ij.to_i*ij.to_i*ij.to_i}  
+  end 
+  def divisible_by by  
+    byy = by.to_i
+    self.map {|ij| 
+              if (ij.to_i % byy == 0) 
+               ij.to_i 
+              end
+             }
+  end
+  def strictly_above by  
+    by = by.to_i
+    self.select{|i| i > by}
+  end
+  def strictly_below by  
+    by = by.to_i
+    self.select{|i| i < by}
+  end
 end
 
 puts [1, 2, 3].square  
 puts [1, 2, 3].cube  
-puts [1, 2, 3, 4, 5, 6].divisible_by(2) 
-puts [1, 2, 3, 4].strictly_above(2) 
-puts [1, 2, 3, 4].strictly_below(3) 
+puts [1, 2, 3, 4, 5, 6].divisible_by 2  
+puts [1, 2, 3, 4].strictly_above 2  
+puts [1, 2, 3, 4].strictly_below 3  
