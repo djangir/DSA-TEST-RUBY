@@ -13,41 +13,34 @@
 # [1, 2, 3, 4].strictly_below(2) ➞ [1]
 
 
+
+
+
+
 class Array
-    def square
-        arr = self
-        arr.map{|ij| ij.to_i*ij.to_i}  
+    def square 
+      self.map{|ij| ij.to_i*ij.to_i}  
     end
-
-    
     def cube 
-        arr = self
-        arr.map{|ij|ij.to_i*ij.to_i*ij.to_i}  
+      self.map{|ij|ij.to_i*ij.to_i*ij.to_i}  
+    end 
+    def divisible_by(by) 
+       byy = by.to_i
+       self.map{|ij| 
+       if(ij.to_i % byy == 0 )
+         ij.to_i  
+       end 
+               }
     end
-    
-    def divisible_by(by)
-        arr = self
-        byy = by.to_i
-        arr.map{|ij| 
-            if (ij.to_i % byy == 0 )
-                ij.to_i  
-            end 
-        }
+    def strictly_above(by) 
+       by = by.to_i
+       self.select{|i| i > by}
     end
-
-    def strictly_above(by)
-        arr = self
-        by = by.to_i
-        arr.select{|i| i > by}
-    end
-
-    def strictly_below(by)
-        arr = self
-        by = by.to_i
-        arr.select{|i| i < by}
+    def strictly_below(by) 
+       by = by.to_i
+       self.select{|i| i < by}
     end
 end
-
 
 puts [1, 2, 3].square  
 puts [1, 2, 3].cube  
