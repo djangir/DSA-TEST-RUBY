@@ -2,10 +2,10 @@
 
 class Subb
     
-    def sub(a , b)
-        Array.new.fill("a" , (b...a)).join("").length
-    end  
+  def sub a , b 
+    Array.new.fill("a" , (b...a)).join("").length
+  end  
 end  
 
-puts Subb.new.sub(1000 , 500)
+puts Subb.new.sub 1000 , 500 
  
