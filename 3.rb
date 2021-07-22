@@ -14,20 +14,20 @@
 # how_mega_is_it(10000) ➞ "MEGA MEGA MEGA milestone"
 
 class Megaaa
-  def hello(a)
+  def hello a 
     num = a.to_i
     if num < 100
       "not a mega milestone"
     else
       str = num.to_s
       megaa = str.length-2
-      " MEGA "*megaa + " milestone"
+      " MEGA" * megaa + " milestone"
     end
   end
 end
  
-puts Megaaa.new.hello(54)  
-puts Megaaa.new.hello(143) 
-Megaaa.new.hello(1000)  
-Megaaa.new.hello(9999.9) 
-Megaaa.new.hello(10000) 
+puts Megaaa.new.hello 54   
+puts Megaaa.new.hello 143  
+Megaaa.new.hello 1000  
+Megaaa.new.hello 9999.9  
+Megaaa.new.hello 10000  
