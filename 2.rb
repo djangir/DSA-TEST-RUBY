@@ -18,20 +18,24 @@
 
 
 class Array
+  
   def square 
-    self.map { |ij| ij.to_i*ij.to_i }  
+    self.map { |ij| ij.to_i * ij.to_i }  
   end
+  
   def cube 
-    self.map { |ij|ij.to_i*ij.to_i*ij.to_i }  
+    self.map { |ij| ij.to_i * ij.to_i * ij.to_i }  
   end 
+  
   def divisible_by by  
     byy = by.to_i
-    self.map { |ij| 
+    self.map do |ij| 
                if (ij.to_i % byy == 0) 
                  ij.to_i 
                end
-              }
+             end
   end
+  
   def strictly_above by  
     by = by.to_i
     self.select { |i| i > by }
