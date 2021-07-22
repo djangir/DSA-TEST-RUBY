@@ -19,26 +19,26 @@
 
 class Array
   def square 
-    self.map{|ij| ij.to_i*ij.to_i}  
+    self.map { |ij| ij.to_i*ij.to_i }  
   end
   def cube 
-    self.map{|ij|ij.to_i*ij.to_i*ij.to_i}  
+    self.map { |ij|ij.to_i*ij.to_i*ij.to_i }  
   end 
   def divisible_by by  
     byy = by.to_i
-    self.map {|ij| 
-              if (ij.to_i % byy == 0) 
-               ij.to_i 
-              end
-             }
+    self.map { |ij| 
+               if (ij.to_i % byy == 0) 
+                 ij.to_i 
+               end
+              }
   end
   def strictly_above by  
     by = by.to_i
-    self.select{|i| i > by}
+    self.select { |i| i > by }
   end
   def strictly_below by  
     by = by.to_i
-    self.select{|i| i < by}
+    self.select { |i| i < by }
   end
 end
 
