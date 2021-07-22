@@ -2,13 +2,8 @@
 
 class Subb
     def sub(a , b)
-        arr = []
-        for i in b...a
-             arr << 1     
-        end  
-        arr.join("").length
-    end
+        Array.new.fill("a" , (b...a)).join("").length
+    end  
 end  
-
-puts Subb.new.sub(180 , 90)
+puts Subb.new.sub(1000 , 500)
  
