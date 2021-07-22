@@ -24,7 +24,7 @@ class Funcc
     a = 0
     m = n
     while a < arr.length
-        a +=1
+        a += 1
         if (a == m && a < arr.length) 
           arr.insert(m , "-")
           m = n + m + 1
