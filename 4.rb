@@ -20,7 +20,7 @@ class Hashh
             str1.each{|i| arrr << i.capitalize}
             "##{arrr.join("")}"
         else
-            return  false, "Expected an empty string to return false"
+           false, "Expected an empty string to return false"
         end
     end
 end
