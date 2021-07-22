@@ -9,11 +9,9 @@ class Subb
         for i in @b...@a
              @arr << 1     
         end  
-        puts "without oprator result is : #{@arr.join("").length}"
+        return "without oprator result is : #{@arr.join("").length}"
     end
 end  
 
 Subb.new.sub(180 , 90)
-
  
-
