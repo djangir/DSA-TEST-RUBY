@@ -18,7 +18,7 @@ class Hashh
             str1 = str.split
             arrr = []
             str1.each{|i| arrr << i.capitalize}
-            return "outPut is ##{arrr.join("")} "
+            "##{arrr.join("")}"
         else
             return  false, "Expected an empty string to return false"
         end

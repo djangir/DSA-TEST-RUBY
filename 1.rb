@@ -2,16 +2,13 @@
 
 class Subb
     def sub(a , b)
-        @a = a
-        @b = b
- 
-        @arr = []
-        for i in @b...@a
-             @arr << 1     
+        arr = []
+        for i in b...a
+             arr << 1     
         end  
-        return "without oprator result is : #{@arr.join("").length}"
+        arr.join("").length
     end
 end  
 
-Subb.new.sub(180 , 90)
+puts Subb.new.sub(180 , 90)
  

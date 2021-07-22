@@ -17,23 +17,26 @@ class Funcc
     def pair(str , num)
         str1 = str.delete(" -").upcase
         str2 = str1.reverse
-        @n = num
-        @arr = []
-        str2.each_char {|i| @arr << i }
-        @a = 0
-        @m = @n
-        while @a < @arr.length
-            @a +=1
-            if @a == @m && @a < @arr.length 
-                @arr.insert(@m , "-")
-                @m = @n+@m+1
+        n = num
+        arr = []
+        str2.each_char {|i| arr << i }
+        a = 0
+        m = n
+        while a < arr.length
+            a +=1
+            if a == m && a < arr.length 
+                arr.insert(m , "-")
+                m = n+m+1
             end
-         end
-        return @arr.reverse.join()
+        end
+        arr.reverse.join()
     end
 end 
-puts "inter strign"
-string = gets.chomp
-puts Funcc.new.pair string , 3
+ 
+ 
+puts Funcc.new.pair("5F3Z-2e-9-w", 4)
+puts Funcc.new.pair("2-5g-3-J" , 2)
+puts Funcc.new.pair("2-4A0r7-4k" , 3)
+puts Funcc.new.pair("nlj-206-fv" , 3)
 
         
