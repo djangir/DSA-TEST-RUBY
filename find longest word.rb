@@ -1,6 +1,11 @@
-def longest_word(st)
-  str = st.split(" ")
-  str.max_by(&:length) # (&:length) Means { |x| x.length } 
+class Abc
+  def longest_word(str)
+    str.split(" ").max_by(&:length) 
+  end
 end
 
-puts longest_word("Margaret's toy is plastic.")
+x = Abc.new  
+ 
+puts x.longest_word("Hello darkness my old friend.") 
+puts x.longest_word("Hello there mate.")
+puts x.longest_word("Margaret's toy is plastic.")
