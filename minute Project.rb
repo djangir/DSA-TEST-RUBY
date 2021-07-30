@@ -15,13 +15,18 @@
 
 
 # ___________________________________________________________________________
-def wash_hands(a, b)
-  secs = a * b * 21 * 30 
-  minutes = secs / 60
-  sec = secs % 60
-  "#{minutes} minutes and #{sec} seconds"
+class Abc
+  def wash_hands(a, b)
+    secs = a * b * 21 * 30 
+    minutes = secs / 60
+    sec = secs % 60
+    "#{minutes} minutes and #{sec} seconds"
+  end
 end
 
-puts wash_hands(8, 7)
-puts wash_hands(0, 0)
-puts wash_hands(7, 9)
+x = Abc.new  
+
+puts x.wash_hands(8, 7)
+puts x.wash_hands(0, 0) 
+puts x.wash_hands(7, 9)
+ 
